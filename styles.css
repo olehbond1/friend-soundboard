@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 500px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease;
+}
+
+/* Ефект тряски при натисканні */
+.card img.shake {
+  transform: scale(1.05) rotate(3deg);
+}
+
+.boom-btn {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff3333;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #b30000, 0 5px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.1s ease;
+}
+
+.boom-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #b30000, 0 2px 5px rgba(0, 0, 0, 0.4);
+}
