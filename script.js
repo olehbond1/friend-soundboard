@@ -16,11 +16,22 @@ const soundUrls = [
   "https://www.myinstants.com/media/sounds/du-bist-gut-genug.mp3"
 ];
 
+// Єдиний "поточний" звук — щоб можна було зупинити попередній перед новим
+let currentAudio = null;
+
 function playRandomSound() {
+  // Зупиняємо попередню мелодію, якщо вона ще грає
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  }
+
   const url = soundUrls[Math.floor(Math.random() * soundUrls.length)];
   const audio = new Audio(url);
+  currentAudio = audio;
+
   audio.play().catch((err) => {
-    // Браузер міг заблокувати автоплей або лінк недоступний (CORS) — просто ігноруємо
     console.warn("Не вдалося відтворити звук:", err);
   });
 }
@@ -29,8 +40,7 @@ function shakePhoto(photoId) {
   const photo = document.getElementById(photoId);
   if (!photo) return;
   photo.classList.remove("shake");
-  // reflow, щоб анімація перезапустилась навіть при швидких повторних кліках
-  void photo.offsetWidth;
+  void photo.offsetWidth; // reflow, щоб анімація перезапустилась навіть при швидких кліках
   photo.classList.add("shake");
   setTimeout(() => photo.classList.remove("shake"), 200);
 }
