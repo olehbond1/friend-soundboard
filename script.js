@@ -13,19 +13,7 @@ const soundUrls = [
   "https://www.myinstants.com/media/sounds/ive-got-this-faaaaaaaaahhhhh.mp3",
   "https://www.myinstants.com/media/sounds/daddys-home.mp3",
   "https://www.myinstants.com/media/sounds/fart-meme-sound.mp3",
-  "https://www.myinstants.com/media/sounds/du-bist-gut-genug.mp3",
-  "https://www.myinstants.com/media/sounds/ecpu-polska.mp3",
-  "https://www.myinstants.com/media/sounds/ivona-zamknij-morde.mp3",
-  "https://www.myinstants.com/media/sounds/polish-toilet-refrain.mp3",
-  "https://www.myinstants.com/media/sounds/pan-jest-niemieckim-agentem.mp3",
-  "https://www.myinstants.com/media/sounds/kurrrrrwa.mp3",
-  "https://www.myinstants.com/media/sounds/romanceeeeeeeeeeeeee.mp3",
-  "https://www.myinstants.com/media/sounds/anime-ahh.mp3",
-  "https://www.myinstants.com/media/sounds/michael-jackson-hee-hee.mp3",
-  "https://www.myinstants.com/media/sounds/dun-dun-dun-sound-effect-brass_8nFBccR.mp3",
-  "https://www.myinstants.com/media/sounds/m-e-o-w.mp3",
-  "https://www.myinstants.com/media/sounds/undertakers-bell_2UwFCIe.mp3",
-  "https://www.myinstants.com/media/sounds/indian-song.mp3"
+  "https://www.myinstants.com/media/sounds/du-bist-gut-genug.mp3"
 ];
 
 // Єдиний "поточний" звук — щоб можна було зупинити попередній перед новим
